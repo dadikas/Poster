@@ -1,6 +1,12 @@
 import { PosterDocument, PosterImage, PosterItem, PosterStep } from "@/lib/poster-types";
 
 function toAbsoluteUrl(url: string, origin?: string) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+  if (!origin && url.startsWith("/") && basePath && !url.startsWith(`${basePath}/`)) {
+    return `${basePath}${url}`;
+  }
+
   if (!origin || !url.startsWith("/")) {
     return url;
   }

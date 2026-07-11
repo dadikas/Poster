@@ -109,7 +109,7 @@ export const samplePoster: PosterDocument = {
   heroFrameStyle: "electrical-spark",
   brand: {
     logoImage: {
-      url: "/api/poster-assets/esutech-logo.jpg",
+      url: "/poster-assets/esutech-logo.jpg",
       alt: "ESUTECH logo",
     },
     companyName: "OKADEN",
