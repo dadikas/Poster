@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
       { protocol: "http", hostname: "**" },
     ],
   },
+  outputFileTracingIncludes: {
+    "/api/poster-assets/[file]": ["./image/**/*"],
+  },
   turbopack: {
     root: process.cwd(),
   },
