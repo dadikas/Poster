@@ -1,8 +1,0 @@
-{
-  "/_global-error/page": "app/_global-error/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/poster-assets/[file]/route": "app/api/poster-assets/[file]/route.js",
-  "/api/webhooks/poster/route": "app/api/webhooks/poster/route.js",
-  "/editor/page": "app/editor/page.js",
-  "/page": "app/page.js"
-}

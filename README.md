@@ -15,6 +15,27 @@ npm run dev
 
 Mo [http://localhost:3000](http://localhost:3000).
 
+## Chay tren GitHub
+
+Repo da duoc chuan bi de GitHub Actions co the tu dong kiem tra moi lan `push` hoac tao `pull request`.
+
+Workflow:
+
+- cai dependencies bang `npm ci`
+- chay `npm run lint`
+- chay `npm run type-check`
+- chay `npm run build`
+
+File workflow nam tai:
+
+- `.github/workflows/ci.yml`
+
+Luu y:
+
+- GitHub Actions co the build va kiem tra app nay.
+- GitHub Pages khong phu hop de deploy truc tiep vi du an co API routes nhu `/api/webhooks/poster` va `/api/poster-assets/[file]`.
+- Neu muon host ban chay that, nen deploy len nen tang ho tro Next.js server nhu Vercel, Netlify, hoac may chu Node rieng.
+
 ## Cach dung
 
 1. Sua JSON trong khung editor.
