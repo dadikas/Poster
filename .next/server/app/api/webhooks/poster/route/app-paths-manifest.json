@@ -1,0 +1,3 @@
+{
+  "/api/webhooks/poster/route": "app/api/webhooks/poster/route.js"
+}

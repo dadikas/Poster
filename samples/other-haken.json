@@ -1,0 +1,100 @@
+﻿{
+    "industry":  "other",
+    "style":  "bold",
+    "sectionTitleStyle":  "ribbon",
+    "heroFrameStyle":  "other-wave",
+    "brand":  {
+                  "companyName":  "FLEX WORK PARTNERS",
+                  "campaign":  "Tuyen dung don khac / haken",
+                  "role":  "Nhieu vi tri - nhieu moi truong - de tu van nhanh",
+                  "tagline":  "Tong hong de phan biet cac don khac voi cac nganh chuyen mon"
+              },
+    "hero":  {
+                 "badge":  "Don khac",
+                 "headline":  "Linh hoat thay noi dung, thay anh va doi style nhanh",
+                 "subheadline":  "Phu hop cho haken hoac nhung don can poster nhanh nhung van ro rang"
+             },
+    "companySection":  {
+                           "title":  "Ten cong ty",
+                           "intro":  "Mau nay dung khi don chua xep vao nganh cu the hoac can tach rieng cho haken.",
+                           "bullets":  [
+                                           "De doi ten cong ty va thong diep chinh",
+                                           "Co the thay hero image theo vi tri cu the",
+                                           "Phu hop khi can ra poster nhanh"
+                                       ]
+                       },
+    "jobSection":  {
+                       "title":  "Noi dung cong viec",
+                       "intro":  "Doi lai danh sach nay de phu hop tung don cu the.",
+                       "bullets":  [
+                                       "Lam viec theo huong dan va phan cong",
+                                       "Phoi hop voi doi nhom tai noi lam viec",
+                                       "Bao cao tinh hinh cong viec khi can",
+                                       "Tuan thu noi quy va thoi gian lam viec"
+                                   ]
+                   },
+    "environmentSection":  {
+                               "title":  "Moi truong lam viec",
+                               "cards":  [
+                                             {
+                                                 "title":  "Linh hoat",
+                                                 "description":  "Co the ap dung cho nhieu loai noi lam viec khac nhau."
+                                             },
+                                             {
+                                                 "title":  "De bo sung",
+                                                 "bullets":  [
+                                                                 "Them bullet nhanh",
+                                                                 "Thay anh nhanh",
+                                                                 "Doi style nhanh"
+                                                             ]
+                                             },
+                                             {
+                                                 "title":  "De tu van",
+                                                 "description":  "Form ro rang, de gui qua dien thoai cho ung vien xem."
+                                             }
+                                         ]
+                           },
+    "growthSection":  {
+                          "title":  "Dinh huong phat trien sau khi vao cong ty",
+                          "steps":  [
+                                        {
+                                            "title":  "Nhan viec",
+                                            "description":  "Lam quen moi truong"
+                                        },
+                                        {
+                                            "title":  "Theo huong dan",
+                                            "description":  "Nam duoc cong viec co ban"
+                                        },
+                                        {
+                                            "title":  "On dinh",
+                                            "description":  "Lam viec deu va ro rang hon"
+                                        },
+                                        {
+                                            "title":  "Mo rong",
+                                            "description":  "Co the chuyen sang vi tri phu hop hon"
+                                        }
+                                    ],
+                          "traits":  [
+                                         {
+                                             "title":  "Ung vien phu hop",
+                                             "bullets":  [
+                                                             "Nhanh nhay",
+                                                             "Co tinh hop tac",
+                                                             "Muon di lam som"
+                                                         ]
+                                         }
+                                     ]
+                      },
+    "majorSection":  {
+                         "title":  "Chuyen nganh tuyen dung",
+                         "majors":  [
+                                        "Khong gioi han chuyen nganh",
+                                        "Co the uu tien ung vien co kinh nghiem lien quan",
+                                        "Phu hop ung vien muon doi moi truong",
+                                        "Chi tiet se dieu chinh theo tung don"
+                                    ],
+                         "notes":  [
+                                       "Mau nay rat hop de lam nhanh cho haken hoac don tong hop."
+                                   ]
+                     }
+}

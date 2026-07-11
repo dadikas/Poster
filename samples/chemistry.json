@@ -1,0 +1,100 @@
+﻿{
+    "industry":  "chemistry",
+    "style":  "clean",
+    "sectionTitleStyle":  "plate",
+    "heroFrameStyle":  "chemistry-molecule",
+    "brand":  {
+                  "companyName":  "PURE MATERIAL SCIENCE",
+                  "campaign":  "Tuyen dung nhan su hoa hoc",
+                  "role":  "Pha che - kiem tra - van hanh quy trinh san xuat",
+                  "tagline":  "Tong tim hop cho nganh hoa hoc, vat lieu va phong kiem nghiem"
+              },
+    "hero":  {
+                 "badge":  "Hoa hoc",
+                 "headline":  "Moi truong thao tac chuan, sach va co quy trinh ro rang",
+                 "subheadline":  "Phu hop cho don pha che, van hanh, kiem tra chat luong va phong lab"
+             },
+    "companySection":  {
+                           "title":  "Ten cong ty",
+                           "intro":  "Cong ty hoat dong trong linh vuc vat lieu, hoa chat va kiem tra chat luong san pham.",
+                           "bullets":  [
+                                           "Co the thay anh bang phong thi nghiem, day chuyen san xuat, vat lieu mau",
+                                           "Mau tim tao cam giac hien dai va nghien cuu",
+                                           "Phu hop cho poster can su tinh sach va ro net"
+                                       ]
+                       },
+    "jobSection":  {
+                       "title":  "Noi dung cong viec",
+                       "intro":  "Danh sach cong viec co the bo sung them de phu hop voi tung quy trinh san xuat.",
+                       "bullets":  [
+                                       "Ho tro pha che va canh chinh nguyen lieu",
+                                       "Kiem tra tinh trang san xuat va thong so co ban",
+                                       "Lay mau va ghi nhan ket qua",
+                                       "Ve sinh khu thao tac va tuan thu quy tac an toan"
+                                   ]
+                   },
+    "environmentSection":  {
+                               "title":  "Moi truong lam viec",
+                               "cards":  [
+                                             {
+                                                 "title":  "Khu thao tac sach",
+                                                 "description":  "Moi truong thao tac gon gang, yeu cau can than va chuan xac."
+                                             },
+                                             {
+                                                 "title":  "Huong dan",
+                                                 "bullets":  [
+                                                                 "Quy trinh thao tac",
+                                                                 "An toan hoa chat",
+                                                                 "Ghi chep du lieu"
+                                                             ]
+                                             },
+                                             {
+                                                 "title":  "Co hoi hoc nghe",
+                                                 "description":  "Co the hoc them ve vat lieu, quy trinh va tieu chuan chat luong."
+                                             }
+                                         ]
+                           },
+    "growthSection":  {
+                          "title":  "Dinh huong phat trien sau khi vao cong ty",
+                          "steps":  [
+                                        {
+                                            "title":  "Lam quen",
+                                            "description":  "Hoc quy trinh va an toan"
+                                        },
+                                        {
+                                            "title":  "Phoi hop",
+                                            "description":  "Ho tro thao tac va ghi nhan"
+                                        },
+                                        {
+                                            "title":  "On dinh",
+                                            "description":  "Tu kiem tra cac muc co ban"
+                                        },
+                                        {
+                                            "title":  "Nang cao",
+                                            "description":  "Hieu sau hon ve quy trinh"
+                                        }
+                                    ],
+                          "traits":  [
+                                         {
+                                             "title":  "Ung vien phu hop",
+                                             "bullets":  [
+                                                             "Can than",
+                                                             "Co y thuc an toan",
+                                                             "Thich cong viec co quy trinh"
+                                                         ]
+                                         }
+                                     ]
+                      },
+    "majorSection":  {
+                         "title":  "Chuyen nganh tuyen dung",
+                         "majors":  [
+                                        "Hoa hoc",
+                                        "Cong nghe vat lieu",
+                                        "Cong nghe sinh hoc",
+                                        "Cac nganh lien quan"
+                                    ],
+                         "notes":  [
+                                       "Neu can poster manh hon, co the doi style tong sang bold."
+                                   ]
+                     }
+}

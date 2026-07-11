@@ -1,0 +1,100 @@
+﻿{
+    "industry":  "construction",
+    "style":  "clean",
+    "sectionTitleStyle":  "plate",
+    "heroFrameStyle":  "construction-slab",
+    "brand":  {
+                  "companyName":  "BUILD CORE",
+                  "campaign":  "Tuyen dung nhan su xay dung",
+                  "role":  "Thi cong - giam sat - quan ly hien truong",
+                  "tagline":  "Mau xam va form hero dang khoi cho cac don xay dung"
+              },
+    "hero":  {
+                 "badge":  "Xay dung",
+                 "headline":  "Lam viec tai cong truong voi lo trinh nang cao tay nghe",
+                 "subheadline":  "Phu hop cho don gian giao, xay dung, lap dat ket cau va ho tro hien truong"
+             },
+    "companySection":  {
+                           "title":  "Ten cong ty",
+                           "intro":  "Cong ty chuyen ve thi cong va quan ly du an xay dung cho nha xuong, nha dan dung va ha tang.",
+                           "bullets":  [
+                                           "Co the dat anh cong truong, can cau, nhan su hien truong",
+                                           "Phu hop de the hien tinh on dinh va ky luat",
+                                           "Noi dung song ngu ro rang cho nguoi xem tren dien thoai"
+                                       ]
+                       },
+    "jobSection":  {
+                       "title":  "Noi dung cong viec",
+                       "intro":  "App se tu tao bullet them neu ban bo sung nhieu muc trong JSON.",
+                       "bullets":  [
+                                       "Ho tro thi cong va kiem tra cong trinh tai hien truong",
+                                       "Doc ban ve co ban va phoi hop voi to doi",
+                                       "Theo doi tien do, vat tu va an toan lao dong",
+                                       "Bao cao va cap nhat tinh hinh cong viec moi ngay"
+                                   ]
+                   },
+    "environmentSection":  {
+                               "title":  "Moi truong lam viec",
+                               "cards":  [
+                                             {
+                                                 "title":  "Hien truong thuc te",
+                                                 "description":  "Gan voi cong trinh dang thi cong, de hoc nhanh va thay ro quy trinh."
+                                             },
+                                             {
+                                                 "title":  "Ky luat va an toan",
+                                                 "bullets":  [
+                                                                 "Bao ho lao dong",
+                                                                 "Ky luat cong truong",
+                                                                 "Quan sat va bao cao"
+                                                             ]
+                                             },
+                                             {
+                                                 "title":  "Dong doi ho tro",
+                                                 "description":  "Lam viec theo to, co nguoi huong dan va lo trinh phan cong ro."
+                                             }
+                                         ]
+                           },
+    "growthSection":  {
+                          "title":  "Dinh huong phat trien sau khi vao cong ty",
+                          "steps":  [
+                                        {
+                                            "title":  "Nhap mon",
+                                            "description":  "Hoc quy tac hien truong"
+                                        },
+                                        {
+                                            "title":  "Theo to",
+                                            "description":  "Thuc hanh cung doi nhom"
+                                        },
+                                        {
+                                            "title":  "Tu tin",
+                                            "description":  "Nhan phan viec co ban"
+                                        },
+                                        {
+                                            "title":  "Tien len",
+                                            "description":  "Huong toi to truong"
+                                        }
+                                    ],
+                          "traits":  [
+                                         {
+                                             "title":  "Ung vien phu hop",
+                                             "bullets":  [
+                                                             "Chiu kho va dung gio",
+                                                             "Ton trong quy tac an toan",
+                                                             "Muon gan bo lau dai"
+                                                         ]
+                                         }
+                                     ]
+                      },
+    "majorSection":  {
+                         "title":  "Chuyen nganh tuyen dung",
+                         "majors":  [
+                                        "Xay dung dan dung",
+                                        "Ha tang ky thuat",
+                                        "Giam sat cong trinh",
+                                        "Cac nganh lien quan"
+                                    ],
+                         "notes":  [
+                                       "Co the doi title style sang ribbon neu muon poster dam chat tuyen dung hon."
+                                   ]
+                     }
+}

@@ -1,0 +1,9 @@
+.poster.split-focus {
+  background: linear-gradient(180deg, #ecfeff 0%, #ffffff 100%);
+  color: #134e4a;
+}
+
+.poster.split-focus .hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

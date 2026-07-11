@@ -1,0 +1,5 @@
+{
+  "/api/poster-assets/[file]/route": "app/api/poster-assets/[file]/route.js",
+  "/editor/page": "app/editor/page.js",
+  "/page": "app/page.js"
+}

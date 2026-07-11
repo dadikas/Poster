@@ -1,0 +1,100 @@
+﻿{
+    "industry":  "it",
+    "style":  "split",
+    "sectionTitleStyle":  "plate",
+    "heroFrameStyle":  "it-matrix",
+    "brand":  {
+                  "companyName":  "NEXT DIGITAL LAB",
+                  "campaign":  "Tuyen dung nhan su IT",
+                  "role":  "Van hanh - ho tro - phat trien he thong",
+                  "tagline":  "Tong xanh la phu hop cho helpdesk, van hanh he thong va phat trien co ban"
+              },
+    "hero":  {
+                 "badge":  "IT",
+                 "headline":  "Lam viec voi he thong so, doi ngu ho tro va lo trinh nang cao nang luc",
+                 "subheadline":  "Phu hop voi poster cho IT support, helpdesk, van hanh he thong, junior engineer"
+             },
+    "companySection":  {
+                           "title":  "Ten cong ty",
+                           "intro":  "Cong ty ho tro van hanh he thong, xu ly su co co ban va cai tien quy trinh so hoa.",
+                           "bullets":  [
+                                           "Co the thay anh may tinh, phong server, doi ngu IT",
+                                           "Phu hop cho poster co tinh hien dai va gon gang",
+                                           "Ton mau xanh la de phan biet voi nganh ky thuat co khi"
+                                       ]
+                       },
+    "jobSection":  {
+                       "title":  "Noi dung cong viec",
+                       "intro":  "Khung nay hop de liet ke ro tung dau viec helpdesk va van hanh.",
+                       "bullets":  [
+                                       "Ho tro nguoi dung va xu ly su co co ban",
+                                       "Theo doi he thong va cap nhat bao cao",
+                                       "Ho tro cai dat phan mem va thiet bi",
+                                       "Phoi hop voi doi ky thuat khi co van de lon"
+                                   ]
+                   },
+    "environmentSection":  {
+                               "title":  "Moi truong lam viec",
+                               "cards":  [
+                                             {
+                                                 "title":  "Moi truong so",
+                                                 "description":  "Lam viec voi may tinh, he thong mang, cong cu theo doi va tai lieu noi bo."
+                                             },
+                                             {
+                                                 "title":  "Dao tao",
+                                                 "bullets":  [
+                                                                 "Quy trinh xu ly ticket",
+                                                                 "Bao mat co ban",
+                                                                 "Tac phong ho tro"
+                                                             ]
+                                             },
+                                             {
+                                                 "title":  "Phat trien",
+                                                 "description":  "Co the mo rong sang van hanh he thong, script co ban hoac kiem thu."
+                                             }
+                                         ]
+                           },
+    "growthSection":  {
+                          "title":  "Dinh huong phat trien sau khi vao cong ty",
+                          "steps":  [
+                                        {
+                                            "title":  "Nhap mon",
+                                            "description":  "Hoc cong cu va quy trinh"
+                                        },
+                                        {
+                                            "title":  "Ho tro",
+                                            "description":  "Xu ly ticket co ban"
+                                        },
+                                        {
+                                            "title":  "On dinh",
+                                            "description":  "Tu xu ly nhieu tinh huong"
+                                        },
+                                        {
+                                            "title":  "Mo rong",
+                                            "description":  "Huong toi van hanh sau hon"
+                                        }
+                                    ],
+                          "traits":  [
+                                         {
+                                             "title":  "Ung vien phu hop",
+                                             "bullets":  [
+                                                             "Thich hoc cong cu moi",
+                                                             "Biet lang nghe",
+                                                             "Co tu duy he thong"
+                                                         ]
+                                         }
+                                     ]
+                      },
+    "majorSection":  {
+                         "title":  "Chuyen nganh tuyen dung",
+                         "majors":  [
+                                        "Cong nghe thong tin",
+                                        "Mang may tinh",
+                                        "He thong thong tin",
+                                        "Cac nganh lien quan"
+                                    ],
+                         "notes":  [
+                                       "Co the doi hero image thanh laptop, man hinh code hoac phong server."
+                                   ]
+                     }
+}

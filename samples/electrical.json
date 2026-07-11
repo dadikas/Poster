@@ -1,0 +1,100 @@
+﻿{
+    "industry":  "electrical",
+    "style":  "bold",
+    "sectionTitleStyle":  "ribbon",
+    "heroFrameStyle":  "electrical-spark",
+    "brand":  {
+                  "companyName":  "OKADEN",
+                  "campaign":  "Tuyen dung ky su thi cong dien",
+                  "role":  "Thi cong - lap dat - dieu khien - tuong lai ben vung",
+                  "tagline":  "Mau cam noi bat cho poster dien cong nghiep va dien cong trinh"
+              },
+    "hero":  {
+                 "badge":  "Dien",
+                 "headline":  "Ket noi he thong dien an toan, on dinh va hieu qua",
+                 "subheadline":  "Phu hop cho ky su thi cong, lap dat thiet bi va bao tri he thong dien"
+             },
+    "companySection":  {
+                           "title":  "Ten cong ty",
+                           "intro":  "Cong ty hoat dong trong linh vuc thi cong dien, lap dat he thong va bao tri thiet bi dien cong nghiep.",
+                           "bullets":  [
+                                           "Co the thay anh bang tu dien, thiet bi, hien truong lap dat",
+                                           "Noi bat voi tong mau cam de thu hut nguoi xem",
+                                           "Phu hop cho poster tuyen dung ky nang dac dinh va ky su"
+                                       ]
+                       },
+    "jobSection":  {
+                       "title":  "Noi dung cong viec",
+                       "intro":  "Ban co the them nhieu muc cong viec va app se tu render bullet day du.",
+                       "bullets":  [
+                                       "Thi cong va lap dat he thong dien tai hien truong",
+                                       "Kiem tra dau noi, thong mach va thiet bi dien",
+                                       "Ho tro doc ban ve va cap nhat bao cao",
+                                       "Phoi hop dam bao an toan va tien do thi cong"
+                                   ]
+                   },
+    "environmentSection":  {
+                               "title":  "Moi truong lam viec",
+                               "cards":  [
+                                             {
+                                                 "title":  "Thiet bi thuc te",
+                                                 "description":  "Lam viec voi bang dien, tu dien, may bien tan va he thong cap nguon."
+                                             },
+                                             {
+                                                 "title":  "Huong dan",
+                                                 "bullets":  [
+                                                                 "OJT",
+                                                                 "Quy trinh an toan",
+                                                                 "Thao tac tieu chuan"
+                                                             ]
+                                             },
+                                             {
+                                                 "title":  "Co hoi phat trien",
+                                                 "description":  "Tang dan ky nang thi cong, kiem tra, van hanh va xu ly su co."
+                                             }
+                                         ]
+                           },
+    "growthSection":  {
+                          "title":  "Dinh huong phat trien sau khi vao cong ty",
+                          "steps":  [
+                                        {
+                                            "title":  "Hoc viec",
+                                            "description":  "Lam quen voi dung cu va an toan"
+                                        },
+                                        {
+                                            "title":  "Thuc hien",
+                                            "description":  "Tham gia lap dat"
+                                        },
+                                        {
+                                            "title":  "Nang tay nghe",
+                                            "description":  "Kiem tra va xu ly loi"
+                                        },
+                                        {
+                                            "title":  "On dinh",
+                                            "description":  "Phu trach cong viec doc lap"
+                                        }
+                                    ],
+                          "traits":  [
+                                         {
+                                             "title":  "Ung vien phu hop",
+                                             "bullets":  [
+                                                             "Can than",
+                                                             "Ton trong an toan",
+                                                             "Muon gan bo lau dai"
+                                                         ]
+                                         }
+                                     ]
+                      },
+    "majorSection":  {
+                         "title":  "Chuyen nganh tuyen dung",
+                         "majors":  [
+                                        "Dien cong nghiep",
+                                        "Dien dan dung",
+                                        "Ky thuat dien",
+                                        "Cac nganh lien quan"
+                                    ],
+                         "notes":  [
+                                       "Dung cho poster dien cong nghiep, bao tri dien, lap dat nha may."
+                                   ]
+                     }
+}

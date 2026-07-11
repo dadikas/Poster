@@ -1,0 +1,9 @@
+.poster.clean-board {
+  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+  color: #0f172a;
+}
+
+.poster.clean-board .hero h1 {
+  font-size: 58px;
+  color: #2563eb;
+}

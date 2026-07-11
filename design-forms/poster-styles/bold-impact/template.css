@@ -1,0 +1,9 @@
+.poster.bold-impact {
+  background: linear-gradient(180deg, #fff7ed 0%, #ffffff 100%);
+  color: #1f2937;
+}
+
+.poster.bold-impact .hero h1 {
+  font-size: 64px;
+  color: #f97316;
+}

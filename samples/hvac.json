@@ -1,0 +1,100 @@
+﻿{
+    "industry":  "hvac",
+    "style":  "clean",
+    "sectionTitleStyle":  "capsule",
+    "heroFrameStyle":  "hvac-breeze",
+    "brand":  {
+                  "companyName":  "COOL AIR ENGINEERING",
+                  "campaign":  "Tuyen dung ky thuat vien nhiet lanh",
+                  "role":  "Lap dat - bao tri - kiem tra he thong dieu hoa va nhiet lanh",
+                  "tagline":  "Tong xanh da troi phu hop cho don nhiet lanh, dieu hoa va thong gio"
+              },
+    "hero":  {
+                 "badge":  "Nhiet lanh",
+                 "headline":  "Moi truong sach, ro quy trinh, de phat trien tay nghe ky thuat",
+                 "subheadline":  "Phu hop cho don dieu hoa, thong gio, ong gio va he thong lanh cong nghiep"
+             },
+    "companySection":  {
+                           "title":  "Ten cong ty",
+                           "intro":  "Cong ty chuyen ve lap dat va bao tri he thong nhiet lanh cho nha may, toa nha va thuong mai.",
+                           "bullets":  [
+                                           "Co the dat anh may dieu hoa, duong ong, dan nong lanh, phong may",
+                                           "Tong mau mat, de nhin va de doc tren dien thoai",
+                                           "Phu hop poster ky nang dac dinh va ky thuat vien bao tri"
+                                       ]
+                       },
+    "jobSection":  {
+                       "title":  "Noi dung cong viec",
+                       "intro":  "Danh sach cong viec co the dai hon khi can lien ke cong tac lap dat va bao tri.",
+                       "bullets":  [
+                                       "Lap dat thiet bi dieu hoa va he thong ong gio",
+                                       "Kiem tra thong so va tinh trang van hanh",
+                                       "Bao tri dinh ky va ve sinh thiet bi",
+                                       "Phoi hop xu ly loi va bao cao cho cap tren"
+                                   ]
+                   },
+    "environmentSection":  {
+                               "title":  "Moi truong lam viec",
+                               "cards":  [
+                                             {
+                                                 "title":  "Quy trinh ro",
+                                                 "description":  "Co nguoi huong dan va checklist ro rang cho tung cong viec."
+                                             },
+                                             {
+                                                 "title":  "Huong dan an toan",
+                                                 "bullets":  [
+                                                                 "Dung cu",
+                                                                 "An toan thi cong",
+                                                                 "Bao cao tinh trang"
+                                                             ]
+                                             },
+                                             {
+                                                 "title":  "Tien bo theo tung buoc",
+                                                 "description":  "Bat dau tu ho tro, sau do nang cao kha nang kiem tra va bao tri."
+                                             }
+                                         ]
+                           },
+    "growthSection":  {
+                          "title":  "Dinh huong phat trien sau khi vao cong ty",
+                          "steps":  [
+                                        {
+                                            "title":  "Lam quen",
+                                            "description":  "Hoc ten thiet bi"
+                                        },
+                                        {
+                                            "title":  "Ho tro",
+                                            "description":  "Lam cung nhom"
+                                        },
+                                        {
+                                            "title":  "Kiem tra",
+                                            "description":  "Doc thong so va xu ly co ban"
+                                        },
+                                        {
+                                            "title":  "Doc lap",
+                                            "description":  "Phu trach cum viec"
+                                        }
+                                    ],
+                          "traits":  [
+                                         {
+                                             "title":  "Ung vien phu hop",
+                                             "bullets":  [
+                                                             "Chiu hoc",
+                                                             "Can than",
+                                                             "Thich cong viec ky thuat"
+                                                         ]
+                                         }
+                                     ]
+                      },
+    "majorSection":  {
+                         "title":  "Chuyen nganh tuyen dung",
+                         "majors":  [
+                                        "Nhiet lanh",
+                                        "Co khi",
+                                        "Dien cong nghiep",
+                                        "Cac nganh lien quan"
+                                    ],
+                         "notes":  [
+                                       "Neu muon hero nhin ky thuat hon, co the doi style sang split."
+                                   ]
+                     }
+}

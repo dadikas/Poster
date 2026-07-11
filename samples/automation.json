@@ -1,0 +1,100 @@
+﻿{
+    "industry":  "automation",
+    "style":  "split",
+    "sectionTitleStyle":  "capsule",
+    "heroFrameStyle":  "automation-grid",
+    "brand":  {
+                  "companyName":  "AUTO SYSTEM PARTNERS",
+                  "campaign":  "Tuyen dung ky su tu dong hoa",
+                  "role":  "Lap trinh - van hanh - toi uu day chuyen san xuat",
+                  "tagline":  "Phu hop poster cho nha may, day chuyen, robot va he thong dieu khien"
+              },
+    "hero":  {
+                 "badge":  "Tu dong hoa",
+                 "headline":  "Phat trien cung day chuyen thong minh va he thong tu dong",
+                 "subheadline":  "Su dung cho cac don lap dat PLC, cam bien, tu dien, robot cong nghiep"
+             },
+    "companySection":  {
+                           "title":  "Ten cong ty",
+                           "intro":  "Cong ty chuyen ve he thong tu dong hoa cho nha may, day chuyen va trung tam van hanh.",
+                           "bullets":  [
+                                           "Moi truong ky thuat gan voi san xuat thuc te",
+                                           "Co the thay bang anh robot, day chuyen, tu dien hoac phong dieu khien",
+                                           "Phu hop voi poster tuyen ky su va nhan vien van hanh"
+                                       ]
+                       },
+    "jobSection":  {
+                       "title":  "Noi dung cong viec",
+                       "intro":  "Them them bullets neu can, app se tu tang dau dong trong cung mot khung.",
+                       "bullets":  [
+                                       "Lap dat va dau noi he thong dieu khien tu dong",
+                                       "Kiem tra PLC, cam bien, relay va thiet bi ngoai vi",
+                                       "Phoi hop lap trinh va test day chuyen",
+                                       "Ho tro bao tri va toi uu van hanh"
+                                   ]
+                   },
+    "environmentSection":  {
+                               "title":  "Moi truong lam viec",
+                               "cards":  [
+                                             {
+                                                 "title":  "He thong hien dai",
+                                                 "description":  "Lam viec voi tu dien, robot, bang dieu khien va day chuyen tu dong."
+                                             },
+                                             {
+                                                 "title":  "Dao tao OJT",
+                                                 "bullets":  [
+                                                                 "Quy trinh van hanh",
+                                                                 "An toan dien",
+                                                                 "Doc so do va thao tac"
+                                                             ]
+                                             },
+                                             {
+                                                 "title":  "Phat trien chuyen mon",
+                                                 "description":  "Tich luy kinh nghiem thuc te ve lap dat, van hanh va cai tien he thong."
+                                             }
+                                         ]
+                           },
+    "growthSection":  {
+                          "title":  "Dinh huong phat trien sau khi vao cong ty",
+                          "steps":  [
+                                        {
+                                            "title":  "Lam quen",
+                                            "description":  "Hoc he thong va quy trinh"
+                                        },
+                                        {
+                                            "title":  "Thuc hanh",
+                                            "description":  "Ho tro lap dat va test"
+                                        },
+                                        {
+                                            "title":  "Nang cao",
+                                            "description":  "Xu ly loi va toi uu"
+                                        },
+                                        {
+                                            "title":  "Chu dong",
+                                            "description":  "Phu trach cum cong viec"
+                                        }
+                                    ],
+                          "traits":  [
+                                         {
+                                             "title":  "Ung vien phu hop",
+                                             "bullets":  [
+                                                             "Thich may moc va he thong",
+                                                             "Can than va co tinh ky luat",
+                                                             "Muon hoc cong nghe moi"
+                                                         ]
+                                         }
+                                     ]
+                      },
+    "majorSection":  {
+                         "title":  "Chuyen nganh tuyen dung",
+                         "majors":  [
+                                        "Tu dong hoa",
+                                        "Co dien tu",
+                                        "Dien cong nghiep",
+                                        "Dieu khien va ky thuat lien quan"
+                                    ],
+                         "notes":  [
+                                       "Neu can poster cho robot cong nghiep, co the doi hero image sang anh canh tay robot."
+                                   ]
+                     }
+}

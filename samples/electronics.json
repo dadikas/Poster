@@ -1,0 +1,100 @@
+﻿{
+    "industry":  "electronics",
+    "style":  "split",
+    "sectionTitleStyle":  "capsule",
+    "heroFrameStyle":  "electronics-circuit",
+    "brand":  {
+                  "companyName":  "MICRO DEVICE WORKS",
+                  "campaign":  "Tuyen dung ky thuat vien dien tu",
+                  "role":  "Lap rap - kiem tra - bao tri linh kien va thiet bi",
+                  "tagline":  "Mau xanh duong phu hop poster san xuat linh kien va dien tu"
+              },
+    "hero":  {
+                 "badge":  "Dien tu",
+                 "headline":  "Tiep can quy trinh dien tu chinh xac va hien dai",
+                 "subheadline":  "Phu hop voi don lap rap PCB, kiem tra, van hanh va bao tri thiet bi dien tu"
+             },
+    "companySection":  {
+                           "title":  "Ten cong ty",
+                           "intro":  "Cong ty chuyen san xuat, lap rap va kiem tra thiet bi dien tu va linh kien chinh xac.",
+                           "bullets":  [
+                                           "Co the thay anh bang day chuyen SMT, PCB, ban kiem tra",
+                                           "Tong mau xanh duong tao cam giac sach va ky thuat",
+                                           "Phu hop voi ca poster nha may va phong ky thuat"
+                                       ]
+                       },
+    "jobSection":  {
+                       "title":  "Noi dung cong viec",
+                       "intro":  "Khung nay phu hop khi can liet ke nhieu thao tac nho va cu the.",
+                       "bullets":  [
+                                       "Lap rap thiet bi va linh kien dien tu theo huong dan",
+                                       "Kiem tra ngoai quan, thong so va tinh on dinh",
+                                       "Su dung dung cu co ban va thiet bi do",
+                                       "Ghi nhan ket qua va bao cao bat thuong"
+                                   ]
+                   },
+    "environmentSection":  {
+                               "title":  "Moi truong lam viec",
+                               "cards":  [
+                                             {
+                                                 "title":  "Moi truong sach",
+                                                 "description":  "Khu vuc thao tac ro rang, sach se, chuan xac."
+                                             },
+                                             {
+                                                 "title":  "Huong dan tung buoc",
+                                                 "bullets":  [
+                                                                 "Tac phong thao tac",
+                                                                 "Kiem tra loi",
+                                                                 "Bao cao ket qua"
+                                                             ]
+                                             },
+                                             {
+                                                 "title":  "Co hoi hoc nghe",
+                                                 "description":  "Tu lap rap den kiem tra, ban se nang dan ky nang va do chinh xac."
+                                             }
+                                         ]
+                           },
+    "growthSection":  {
+                          "title":  "Dinh huong phat trien sau khi vao cong ty",
+                          "steps":  [
+                                        {
+                                            "title":  "Hoc quy trinh",
+                                            "description":  "Nam duoc thao tac"
+                                        },
+                                        {
+                                            "title":  "Thuc hanh",
+                                            "description":  "Lam theo huong dan"
+                                        },
+                                        {
+                                            "title":  "Chuan xac hon",
+                                            "description":  "Giam loi va tang toc do"
+                                        },
+                                        {
+                                            "title":  "Doc lap",
+                                            "description":  "Tu chu trong cum viec"
+                                        }
+                                    ],
+                          "traits":  [
+                                         {
+                                             "title":  "Ung vien phu hop",
+                                             "bullets":  [
+                                                             "Can than",
+                                                             "Tap trung tot",
+                                                             "Thich cong viec chinh xac"
+                                                         ]
+                                         }
+                                     ]
+                      },
+    "majorSection":  {
+                         "title":  "Chuyen nganh tuyen dung",
+                         "majors":  [
+                                        "Dien tu",
+                                        "Dien cong nghiep",
+                                        "Co dien tu",
+                                        "Cac nganh lien quan"
+                                    ],
+                         "notes":  [
+                                       "Co the doi style sang clean neu can poster nhe va sang hon."
+                                   ]
+                     }
+}
