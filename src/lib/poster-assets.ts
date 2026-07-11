@@ -1,5 +1,10 @@
 import { PosterDocument, PosterImage, PosterItem, PosterStep } from "@/lib/poster-types";
 
+const DEFAULT_LOGO_IMAGE: PosterImage = {
+  url: "/poster-assets/esutech-logo.jpg",
+  alt: "ESUTECH logo",
+};
+
 function toAbsoluteUrl(url: string, origin?: string) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -42,11 +47,13 @@ function normalizeSteps(steps: PosterStep[], origin?: string) {
 }
 
 export function applyPosterAssetDefaults(poster: PosterDocument, origin?: string): PosterDocument {
+  const logoImage = normalizeImage(poster.brand.logoImage ?? DEFAULT_LOGO_IMAGE, origin);
+
   return {
     ...poster,
     brand: {
       ...poster.brand,
-      logoImage: normalizeImage(poster.brand.logoImage, origin),
+      logoImage,
     },
     environmentSection: {
       ...poster.environmentSection,

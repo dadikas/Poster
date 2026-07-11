@@ -4,6 +4,10 @@
     "sectionTitleStyle":  "plate",
     "heroFrameStyle":  "it-matrix",
     "brand":  {
+                  "logoImage":  {
+                                    "url":  "/poster-assets/esutech-logo.jpg",
+                                    "alt":  "ESUTECH logo"
+                                },
                   "companyName":  "NEXT DIGITAL LAB",
                   "campaign":  "Tuyen dung nhan su IT",
                   "role":  "Van hanh - ho tro - phat trien he thong",

@@ -4,6 +4,10 @@
     "sectionTitleStyle":  "ribbon",
     "heroFrameStyle":  "electrical-spark",
     "brand":  {
+                  "logoImage":  {
+                                    "url":  "/poster-assets/esutech-logo.jpg",
+                                    "alt":  "ESUTECH logo"
+                                },
                   "companyName":  "OKADEN",
                   "campaign":  "Tuyen dung ky su thi cong dien",
                   "role":  "Thi cong - lap dat - dieu khien - tuong lai ben vung",
