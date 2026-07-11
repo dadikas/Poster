@@ -109,8 +109,8 @@ function FullPoster({
                     className="brand-logo-image"
                     height={36}
                     src={poster.brand.logoImage.url}
-                    style={{ width: "auto", height: "auto", maxWidth: "100%" }}
-                    width={170}
+                    style={{ width: "100%", height: "auto" }}
+                    width={120}
                   />
                 </div>
               ) : (
@@ -289,8 +289,8 @@ function buildMobilePages(poster: PosterDocument) {
                   className="brand-logo-image"
                   height={30}
                   src={poster.brand.logoImage.url}
-                  style={{ width: "auto", height: "auto", maxWidth: "100%" }}
-                  width={140}
+                  style={{ width: "100%", height: "auto" }}
+                  width={96}
                 />
               </div>
             ) : (
@@ -465,7 +465,9 @@ function TimelineStep({
       className="timeline-step"
       style={{ "--timeline-step-color": stepColor } as React.CSSProperties}
     >
-      <TimelineMedia image={step.image} index={index} title={step.title} />
+      <span className="timeline-media-fallback" aria-hidden="true">
+        {String(index + 1).padStart(2, "0")}
+      </span>
       <small className="timeline-index">{String(index + 1).padStart(2, "0")}</small>
       <EditableText as="strong" editable={editable} onChange={onTextChange} path={`growthSection.steps.${index}.title`} value={text(step.title)} />
       {step.description ? (
@@ -505,36 +507,6 @@ function EditableText({
     >
       {value}
     </Tag>
-  );
-}
-
-function TimelineMedia({
-  image,
-  index,
-  title,
-}: {
-  image?: PosterImage;
-  index: number;
-  title: string;
-}) {
-  if (image?.url) {
-    return (
-      <div className="timeline-media-frame">
-        <Image
-          alt={image.alt || title}
-          className="timeline-media-image"
-          fill
-          sizes="96px"
-          src={image.url}
-        />
-      </div>
-    );
-  }
-
-  return (
-    <div className="timeline-media-fallback" aria-hidden="true">
-      {String(index + 1).padStart(2, "0")}
-    </div>
   );
 }
 

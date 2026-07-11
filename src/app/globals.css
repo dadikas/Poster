@@ -659,15 +659,17 @@ a {
   display: inline-flex;
   align-items: center;
   margin-bottom: 12px;
+  width: min(30%, 10rem);
 }
 
 .brand-logo-wrap.mobile {
   margin-bottom: 14px;
+  width: min(30%, 7rem);
 }
 
 .brand-logo-image {
-  width: auto;
-  max-width: min(170px, 100%);
+  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
 }

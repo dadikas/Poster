@@ -165,25 +165,21 @@ export const samplePoster: PosterDocument = {
         title: "Lam quen",
         description: "Nham quy trinh va ky luat lam viec",
         color: "#f97316",
-        image: { url: "", alt: "Lam quen image" },
       },
       {
         title: "Thuc hanh",
         description: "Tham gia cong viec thuc te cung doi ngu",
         color: "#0ea5e9",
-        image: { url: "", alt: "Thuc hanh image" },
       },
       {
         title: "Nang bac",
         description: "Nhan phan viec kho hon va nang cao tay nghe",
         color: "#16a34a",
-        image: { url: "", alt: "Nang bac image" },
       },
       {
         title: "Dan dat",
         description: "Co co hoi tro thanh nhom truong hoac ky su chu chot",
         color: "#7c3aed",
-        image: { url: "", alt: "Dan dat image" },
       },
     ],
     traits: [

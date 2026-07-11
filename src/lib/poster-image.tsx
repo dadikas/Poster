@@ -81,7 +81,7 @@ export function renderPosterImage(
                   <img
                     alt={poster.brand.logoImage.alt ?? poster.brand.companyName}
                     src={poster.brand.logoImage.url}
-                    style={{ width: "140px", height: "30px", objectFit: "contain", objectPosition: "left center" }}
+                    style={{ width: "108px", height: "23px", objectFit: "contain", objectPosition: "left center" }}
                   />
                 ) : (
                   <span>{poster.brand.companyName}</span>

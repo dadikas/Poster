@@ -53,7 +53,6 @@ function createStep(stepNumber: number) {
     title: `Buoc ${stepNumber}`,
     description: "Mo ta ngan",
     color: "#0f766e",
-    image: { url: "", alt: `Step ${stepNumber}` },
   } satisfies PosterStep;
 }
 
