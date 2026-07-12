@@ -68,6 +68,7 @@ export type PosterDocument = {
     badge?: TextValue;
     headline: TextValue;
     subheadline?: TextValue;
+    image?: PosterImage;
   };
   companySection: {
     title: TextValue;

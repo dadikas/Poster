@@ -159,6 +159,34 @@ function TemplateThumbnail({ templateId }: { templateId: PosterTemplate["id"] })
     );
   }
 
+  if (templateId === "image-showcase") {
+    return (
+      <span className="template-thumb template-thumb-image" aria-hidden="true">
+        <span className="template-thumb-image-top">
+          <span className="template-thumb-image-copy">
+            <span className="template-thumb-chip-row">
+              <span className="template-thumb-chip" />
+            </span>
+            <span className="template-thumb-title lg" />
+            <span className="template-thumb-title md" />
+            <span className="template-thumb-line" />
+            <span className="template-thumb-line short" />
+          </span>
+          <span className="template-thumb-image-hero" />
+        </span>
+        <span className="template-thumb-image-strip">
+          <span className="template-thumb-image-card" />
+          <span className="template-thumb-image-card" />
+          <span className="template-thumb-image-card" />
+        </span>
+        <span className="template-thumb-image-footer">
+          <span className="template-thumb-title sm" />
+          <span className="template-thumb-line short" />
+        </span>
+      </span>
+    );
+  }
+
   return (
     <span className="template-thumb template-thumb-split" aria-hidden="true">
       <span className="template-thumb-split-copy">

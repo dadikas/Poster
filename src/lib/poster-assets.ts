@@ -55,6 +55,10 @@ export function applyPosterAssetDefaults(poster: PosterDocument, origin?: string
       ...poster.brand,
       logoImage,
     },
+    hero: {
+      ...poster.hero,
+      image: normalizeImage(poster.hero.image, origin),
+    },
     environmentSection: {
       ...poster.environmentSection,
       cards: normalizeItems(poster.environmentSection.cards, origin),

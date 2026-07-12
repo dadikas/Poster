@@ -108,10 +108,6 @@ export const samplePoster: PosterDocument = {
   sectionTitleStyle: "ribbon",
   heroFrameStyle: "electrical-spark",
   brand: {
-    logoImage: {
-      url: "/poster-assets/esutech-logo.jpg",
-      alt: "ESUTECH logo",
-    },
     companyName: "OKADEN",
     campaign: "Tuyen dung ky su thi cong dien",
     role: "Lam viec tai Nhat Ban trong moi truong ky thuat chuyen nghiep",
@@ -121,6 +117,10 @@ export const samplePoster: PosterDocument = {
     badge: "オカデン",
     headline: "Gia nhap doi ngu thi cong dien cong nghiep tai Nhat Ban",
     subheadline: "Co hoi danh cho ung vien muon hoc nghe, nang tay nghe va on dinh lau dai",
+    image: {
+      url: "",
+      alt: "Hinh anh hero",
+    },
   },
   companySection: {
     title: "01. Gioi thieu cong ty",

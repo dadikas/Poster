@@ -1,4 +1,5 @@
 import { heroFrameStyleOptions, sectionTitleStyleOptions, styleOptions } from "@/lib/sample-poster";
+import { defaultPosterTemplate } from "@/lib/poster-templates";
 import {
   HeroFrameStyle,
   Industry,
@@ -200,20 +201,23 @@ function readPosterDocument(value: unknown): PosterDocument {
 
   return {
     industry: readEnum(value.industry, industryOptions, "industry"),
-    style: readEnum(value.style, styleOptions, "style"),
-    sectionTitleStyle: readOptionalEnum(
-      value.sectionTitleStyle,
-      sectionTitleStyleOptions,
-      "sectionTitleStyle",
-    ) as SectionTitleStyle | undefined,
-    heroFrameStyle: readOptionalEnum(
-      value.heroFrameStyle,
-      heroFrameStyleOptions,
-      "heroFrameStyle",
-    ) as HeroFrameStyle | undefined,
+    style:
+      (readOptionalEnum(value.style, styleOptions, "style") as PosterStyle | undefined) ??
+      defaultPosterTemplate.style,
+    sectionTitleStyle:
+      (readOptionalEnum(
+        value.sectionTitleStyle,
+        sectionTitleStyleOptions,
+        "sectionTitleStyle",
+      ) as SectionTitleStyle | undefined) ?? defaultPosterTemplate.sectionTitleStyle,
+    heroFrameStyle:
+      (readOptionalEnum(
+        value.heroFrameStyle,
+        heroFrameStyleOptions,
+        "heroFrameStyle",
+      ) as HeroFrameStyle | undefined) ?? defaultPosterTemplate.heroFrameStyle,
     theme: readTheme(value.theme, "theme"),
     brand: {
-      logoImage: readImage(value.brand.logoImage, "brand.logoImage"),
       companyName: readString(value.brand.companyName, "brand.companyName"),
       campaign: readString(value.brand.campaign, "brand.campaign"),
       role: readString(value.brand.role, "brand.role"),
@@ -223,6 +227,7 @@ function readPosterDocument(value: unknown): PosterDocument {
       badge: readOptionalString(value.hero.badge, "hero.badge"),
       headline: readString(value.hero.headline, "hero.headline"),
       subheadline: readOptionalString(value.hero.subheadline, "hero.subheadline"),
+      image: readImage(value.hero.image, "hero.image"),
     },
     companySection: {
       title: readString(value.companySection.title, "companySection.title"),

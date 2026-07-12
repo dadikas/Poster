@@ -42,6 +42,16 @@ export const posterTemplates: PosterTemplate[] = [
     accent: "#0f766e",
     surface: "#ecfeff",
   },
+  {
+    id: "image-showcase",
+    name: "Image Showcase",
+    summary: "Uu tien card va step co anh, hop poster muon chen anh minh hoa trong noi dung.",
+    style: "clean",
+    sectionTitleStyle: "capsule",
+    heroFrameStyle: "electronics-circuit",
+    accent: "#0f766e",
+    surface: "#f0fdfa",
+  },
 ];
 
 export const defaultPosterTemplate = posterTemplates[0];

@@ -1,13 +1,6 @@
 ﻿{
     "industry":  "electronics",
-    "style":  "split",
-    "sectionTitleStyle":  "capsule",
-    "heroFrameStyle":  "electronics-circuit",
     "brand":  {
-                  "logoImage":  {
-                                    "url":  "/poster-assets/esutech-logo.jpg",
-                                    "alt":  "ESUTECH logo"
-                                },
                   "companyName":  "MICRO DEVICE WORKS",
                   "campaign":  "Tuyen dung ky thuat vien dien tu",
                   "role":  "Lap rap - kiem tra - bao tri linh kien va thiet bi",

@@ -1,13 +1,6 @@
 ﻿{
     "industry":  "hvac",
-    "style":  "clean",
-    "sectionTitleStyle":  "capsule",
-    "heroFrameStyle":  "hvac-breeze",
     "brand":  {
-                  "logoImage":  {
-                                    "url":  "/poster-assets/esutech-logo.jpg",
-                                    "alt":  "ESUTECH logo"
-                                },
                   "companyName":  "COOL AIR ENGINEERING",
                   "campaign":  "Tuyen dung ky thuat vien nhiet lanh",
                   "role":  "Lap dat - bao tri - kiem tra he thong dieu hoa va nhiet lanh",

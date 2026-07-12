@@ -51,7 +51,6 @@ export function renderPosterImage(
             boxShadow: `0 20px 50px ${theme.primary}33`,
             minHeight: "380px",
             padding: "40px",
-            gap: "24px",
           }}
         >
           <div
@@ -118,59 +117,52 @@ export function renderPosterImage(
               style={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "10px",
-                width: "300px",
-                padding: "22px 24px",
-                borderRadius: "24px",
-                background: "rgba(255,255,255,0.12)",
+                gap: "16px",
+                width: "320px",
               }}
             >
-              <div style={{ fontSize: "30px", fontWeight: 800, lineHeight: 1.2 }}>
-                {poster.hero.headline}
-              </div>
-              {poster.hero.subheadline ? (
-                <div style={{ fontSize: "20px", lineHeight: 1.4, opacity: 0.95 }}>
-                  {poster.hero.subheadline}
+              {poster.hero.image?.url ? (
+                <div
+                  style={{
+                    display: "flex",
+                    borderRadius: "24px",
+                    overflow: "hidden",
+                    border: "2px solid rgba(255,255,255,0.28)",
+                    background: "rgba(255,255,255,0.14)",
+                  }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    alt={poster.hero.image.alt ?? "Hero image"}
+                    src={poster.hero.image.url}
+                    style={{
+                      width: "100%",
+                      height: "220px",
+                      objectFit: "cover",
+                    }}
+                  />
                 </div>
               ) : null}
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-              gap: "18px",
-            }}
-          >
-            {[
-              { label: "Cong ty", value: `${poster.companySection.bullets.length} y chinh` },
-              { label: "Cong viec", value: `${poster.jobSection.bullets.length} dau viec` },
-              { label: "Lo trinh", value: `${poster.growthSection.steps.length} buoc phat trien` },
-            ].map((item) => (
               <div
-                key={item.label}
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "8px",
-                  padding: "24px",
+                  gap: "10px",
+                  padding: "22px 24px",
                   borderRadius: "24px",
-                  background: `linear-gradient(180deg, #ffffff, ${theme.surface})`,
-                  border: `2px solid ${theme.primary}22`,
+                  background: "rgba(255,255,255,0.12)",
                 }}
               >
-                <span style={{ fontSize: "16px", fontWeight: 700, color: theme.secondary }}>
-                  {item.label}
-                </span>
-                <span style={{ fontSize: "26px", fontWeight: 800, color: theme.primary }}>
-                  {item.value}
-                </span>
-                <span style={{ fontSize: "16px", lineHeight: 1.5, color: theme.text }}>
-                  Thu nhap on dinh, dao tao bai ban va co hoi phat trien lau dai.
-                </span>
+                <div style={{ fontSize: "30px", fontWeight: 800, lineHeight: 1.2 }}>
+                  {poster.hero.headline}
+                </div>
+                {poster.hero.subheadline ? (
+                  <div style={{ fontSize: "20px", lineHeight: 1.4, opacity: 0.95 }}>
+                    {poster.hero.subheadline}
+                  </div>
+                ) : null}
               </div>
-            ))}
+            </div>
           </div>
         </div>
 

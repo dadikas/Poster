@@ -1,13 +1,6 @@
 ﻿{
     "industry":  "construction",
-    "style":  "clean",
-    "sectionTitleStyle":  "plate",
-    "heroFrameStyle":  "construction-slab",
     "brand":  {
-                  "logoImage":  {
-                                    "url":  "/poster-assets/esutech-logo.jpg",
-                                    "alt":  "ESUTECH logo"
-                                },
                   "companyName":  "BUILD CORE",
                   "campaign":  "Tuyen dung nhan su xay dung",
                   "role":  "Thi cong - giam sat - quan ly hien truong",

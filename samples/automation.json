@@ -1,13 +1,6 @@
 ﻿{
     "industry":  "automation",
-    "style":  "split",
-    "sectionTitleStyle":  "capsule",
-    "heroFrameStyle":  "automation-grid",
     "brand":  {
-                  "logoImage":  {
-                                    "url":  "/poster-assets/esutech-logo.jpg",
-                                    "alt":  "ESUTECH logo"
-                                },
                   "companyName":  "AUTO SYSTEM PARTNERS",
                   "campaign":  "Tuyen dung ky su tu dong hoa",
                   "role":  "Lap trinh - van hanh - toi uu day chuyen san xuat",

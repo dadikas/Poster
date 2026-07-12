@@ -11,6 +11,8 @@ import { samplePoster } from "@/lib/sample-poster";
 import { loadStoredPoster, saveStoredPoster } from "@/lib/poster-storage";
 import { PosterDocument, PosterItem, PosterStep } from "@/lib/poster-types";
 
+const IMAGE_TEMPLATE_IDS = new Set(["image-showcase"]);
+
 function clonePoster(poster: PosterDocument) {
   return structuredClone(poster);
 }
@@ -23,6 +25,12 @@ function setValueAtPath<T>(value: T, path: string, nextValue: string): T {
   for (let index = 0; index < segments.length - 1; index += 1) {
     const key = segments[index];
     const resolvedKey = /^\d+$/.test(key) ? Number(key) : key;
+    const nextKey = segments[index + 1];
+
+    if (current[resolvedKey] === undefined || current[resolvedKey] === null) {
+      current[resolvedKey] = /^\d+$/.test(nextKey) ? [] : {};
+    }
+
     current = current[resolvedKey];
   }
 
@@ -45,6 +53,7 @@ function createCard() {
     title: "Thong tin moi",
     description: "Them noi dung moi tai day",
     bullets: ["Dong 1"],
+    image: { url: "", alt: "" },
   } satisfies PosterItem;
 }
 
@@ -107,6 +116,7 @@ export function PosterEditorWorkspace() {
   const posterPartOneRef = useRef<HTMLDivElement>(null);
   const posterPartTwoRef = useRef<HTMLDivElement>(null);
   const template = useMemo(() => findPosterTemplate(searchParams.get("template")), [searchParams]);
+  const supportsImages = IMAGE_TEMPLATE_IDS.has(template.id);
   const [poster, setPoster] = useState<PosterDocument>(() => buildPosterFromTemplate(template));
   const [status, setStatus] = useState("");
   const [isExporting, setIsExporting] = useState(false);
@@ -124,6 +134,49 @@ export function PosterEditorWorkspace() {
 
   const updateText = (path: string, value: string) => {
     updatePoster((current) => setValueAtPath(current, path, value));
+  };
+
+  const updateHeroImage = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+
+    if (!file) {
+      return;
+    }
+
+    if (!file.type.startsWith("image/")) {
+      setStatus("Vui long chon dung file hinh anh.");
+      return;
+    }
+
+    try {
+      const dataUrl = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(typeof reader.result === "string" ? reader.result : "");
+        reader.onerror = () => reject(reader.error ?? new Error("Khong doc duoc file anh."));
+        reader.readAsDataURL(file);
+      });
+
+      updatePoster((current) => {
+        let next = setValueAtPath(current, "hero.image.url", dataUrl);
+        if (!(current.hero.image?.alt ?? "").trim()) {
+          next = setValueAtPath(next, "hero.image.alt", file.name.replace(/\.[^.]+$/, ""));
+        }
+        return next;
+      });
+      setStatus(`Da nap anh hero: ${file.name}`);
+      event.target.value = "";
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : "Khong the tai anh.");
+    }
+  };
+
+  const removeHeroImage = () => {
+    updatePoster((current) => {
+      const next = clonePoster(current);
+      next.hero.image = { url: "", alt: next.hero.image?.alt ?? "" };
+      return next;
+    });
+    setStatus("Da xoa anh hero.");
   };
 
   const updateListItem = (path: string, index: number, value: string) => {
@@ -272,6 +325,26 @@ export function PosterEditorWorkspace() {
               <span>Tagline</span>
               <textarea onChange={(event) => updateText("brand.tagline", event.target.value)} rows={2} value={poster.brand.tagline} />
             </label>
+            {supportsImages ? (
+              <>
+                <label className="field-block field-block-full">
+                  <span>Hero image file</span>
+                  <input accept="image/*" onChange={updateHeroImage} type="file" />
+                </label>
+                <label className="field-block field-block-full">
+                  <span>Hero image alt</span>
+                  <input onChange={(event) => updateText("hero.image.alt", event.target.value)} value={poster.hero.image?.alt ?? ""} />
+                </label>
+                {poster.hero.image?.url ? (
+                  <div className="field-block field-block-full field-inline-actions">
+                    <span>Anh hero da san sang tren poster</span>
+                    <button className="pill mini ghost" onClick={removeHeroImage} type="button">
+                      Xoa anh hero
+                    </button>
+                  </div>
+                ) : null}
+              </>
+            ) : null}
           </div>
 
           <EditorListSection
@@ -292,6 +365,7 @@ export function PosterEditorWorkspace() {
 
           <EditorCardSection
             cards={poster.environmentSection.cards}
+            enableImageFields={supportsImages}
             onAdd={addEnvironmentCard}
             onChange={updateText}
             onRemove={removeEnvironmentCard}
@@ -300,6 +374,7 @@ export function PosterEditorWorkspace() {
           />
 
           <EditorStepSection
+            enableImageFields={supportsImages}
             onAdd={addStep}
             onChange={updateText}
             onRemove={removeStep}
@@ -309,6 +384,7 @@ export function PosterEditorWorkspace() {
 
           <EditorCardSection
             cards={poster.growthSection.traits ?? []}
+            enableImageFields={supportsImages}
             onAdd={addTraitCard}
             onChange={updateText}
             onRemove={removeTraitCard}
@@ -398,6 +474,7 @@ function EditorCardSection({
   title,
   cards,
   pathPrefix,
+  enableImageFields,
   onChange,
   onAdd,
   onRemove,
@@ -405,6 +482,7 @@ function EditorCardSection({
   title: string;
   cards: PosterItem[];
   pathPrefix: string;
+  enableImageFields: boolean;
   onChange: (path: string, value: string) => void;
   onAdd: () => void;
   onRemove: (index: number) => void;
@@ -428,6 +506,18 @@ function EditorCardSection({
               <span>Description</span>
               <textarea onChange={(event) => onChange(`${pathPrefix}.${index}.description`, event.target.value)} rows={2} value={card.description ?? ""} />
             </label>
+            {enableImageFields ? (
+              <>
+                <label className="field-block">
+                  <span>Image URL</span>
+                  <input onChange={(event) => onChange(`${pathPrefix}.${index}.image.url`, event.target.value)} value={card.image?.url ?? ""} />
+                </label>
+                <label className="field-block">
+                  <span>Image alt</span>
+                  <input onChange={(event) => onChange(`${pathPrefix}.${index}.image.alt`, event.target.value)} value={card.image?.alt ?? ""} />
+                </label>
+              </>
+            ) : null}
             <button className="pill mini ghost" onClick={() => onRemove(index)} type="button">
               Xoa card
             </button>
@@ -441,12 +531,14 @@ function EditorCardSection({
 function EditorStepSection({
   title,
   steps,
+  enableImageFields,
   onChange,
   onAdd,
   onRemove,
 }: {
   title: string;
   steps: PosterStep[];
+  enableImageFields: boolean;
   onChange: (path: string, value: string) => void;
   onAdd: () => void;
   onRemove: (index: number) => void;
@@ -470,6 +562,18 @@ function EditorStepSection({
               <span>Description</span>
               <textarea onChange={(event) => onChange(`growthSection.steps.${index}.description`, event.target.value)} rows={2} value={step.description ?? ""} />
             </label>
+            {enableImageFields ? (
+              <>
+                <label className="field-block">
+                  <span>Image URL</span>
+                  <input onChange={(event) => onChange(`growthSection.steps.${index}.image.url`, event.target.value)} value={step.image?.url ?? ""} />
+                </label>
+                <label className="field-block">
+                  <span>Image alt</span>
+                  <input onChange={(event) => onChange(`growthSection.steps.${index}.image.alt`, event.target.value)} value={step.image?.alt ?? ""} />
+                </label>
+              </>
+            ) : null}
             <button className="pill mini ghost" onClick={() => onRemove(index)} type="button">
               Xoa step
             </button>

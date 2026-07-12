@@ -1,13 +1,6 @@
 ﻿{
     "industry":  "chemistry",
-    "style":  "clean",
-    "sectionTitleStyle":  "plate",
-    "heroFrameStyle":  "chemistry-molecule",
     "brand":  {
-                  "logoImage":  {
-                                    "url":  "/poster-assets/esutech-logo.jpg",
-                                    "alt":  "ESUTECH logo"
-                                },
                   "companyName":  "PURE MATERIAL SCIENCE",
                   "campaign":  "Tuyen dung nhan su hoa hoc",
                   "role":  "Pha che - kiem tra - van hanh quy trinh san xuat",

@@ -1,13 +1,6 @@
 ﻿{
     "industry":  "other",
-    "style":  "bold",
-    "sectionTitleStyle":  "ribbon",
-    "heroFrameStyle":  "other-wave",
     "brand":  {
-                  "logoImage":  {
-                                    "url":  "/poster-assets/esutech-logo.jpg",
-                                    "alt":  "ESUTECH logo"
-                                },
                   "companyName":  "FLEX WORK PARTNERS",
                   "campaign":  "Tuyen dung don khac / haken",
                   "role":  "Nhieu vi tri - nhieu moi truong - de tu van nhanh",

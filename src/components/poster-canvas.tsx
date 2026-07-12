@@ -26,6 +26,10 @@ function text(value?: TextValue) {
   return value ?? "";
 }
 
+function compactSectionTitle(value?: TextValue) {
+  return text(value).replace(/^\s*\d+[\.\-:\)]*\s*/u, "").trim();
+}
+
 function resolveTheme(industry: Industry, overrides?: Partial<ThemeColors>) {
   return { ...industryThemes[industry], ...overrides };
 }
@@ -95,12 +99,17 @@ function FullPoster({
 }) {
   const showTopFrame = frame === "full" || frame === "part-1";
   const showBottomFrame = frame === "full" || frame === "part-2";
+  const showHeroImage = Boolean(poster.hero.image?.url);
 
   return (
     <>
       {showTopFrame ? (
         <>
-          <header className="poster-hero">
+          <header
+            className={["poster-hero", showHeroImage ? "poster-hero-with-image" : ""]
+              .filter(Boolean)
+              .join(" ")}
+          >
             <div className="hero-copy">
               {poster.brand.logoImage?.url ? (
                 <div className="brand-logo-wrap">
@@ -144,7 +153,18 @@ function FullPoster({
                 ) : null}
               </div>
             </div>
-            <HeroAside heroFrameStyle={heroFrameStyle} poster={poster} />
+            <div className="hero-side-stack">
+              {showHeroImage ? (
+                <MediaFrame
+                  fancy
+                  frameStyle={heroFrameStyle}
+                  image={poster.hero.image}
+                  label="Hero image"
+                  large
+                />
+              ) : null}
+              <HeroAside poster={poster} />
+            </div>
           </header>
 
           <section className="poster-sections poster-sections-full">
@@ -219,31 +239,26 @@ function FullPoster({
   );
 }
 
-function HeroAside({
-  poster,
-  heroFrameStyle,
-}: {
-  poster: PosterDocument;
-  heroFrameStyle: HeroFrameStyle;
-}) {
+function HeroAside({ poster }: { poster: PosterDocument }) {
   const summaryItems = [
-    { label: "Cong ty", value: `${poster.companySection.bullets.length} y chinh` },
-    { label: "Cong viec", value: `${poster.jobSection.bullets.length} dau viec` },
-    { label: "Lo trinh", value: `${poster.growthSection.steps.length} buoc phat trien` },
-  ];
+    compactSectionTitle(poster.companySection.title),
+    compactSectionTitle(poster.jobSection.title),
+    compactSectionTitle(poster.environmentSection.title),
+    compactSectionTitle(poster.growthSection.title),
+    compactSectionTitle(poster.majorSection.title),
+  ].filter(Boolean);
 
   return (
-    <aside className={`hero-aside hero-frame-${heroFrameStyle}`}>
+    <aside className="hero-aside">
       <div className="hero-aside-top">
         <span className="hero-aside-label">Thong tin nhanh</span>
-        <strong>{poster.brand.companyName}</strong>
-        <p>{poster.brand.tagline}</p>
+        <strong>Cac muc chinh</strong>
       </div>
       <div className="hero-aside-grid">
-        {summaryItems.map((item) => (
-          <article className="hero-aside-card" key={item.label}>
-            <small>{item.label}</small>
-            <strong>{item.value}</strong>
+        {summaryItems.map((item, index) => (
+          <article className="hero-aside-card" key={`${item}-${index}`}>
+            <small>{String(index + 1).padStart(2, "0")}</small>
+            <strong>{item}</strong>
           </article>
         ))}
       </div>
@@ -468,7 +483,6 @@ function TimelineStep({
       <span className="timeline-media-fallback" aria-hidden="true">
         {String(index + 1).padStart(2, "0")}
       </span>
-      <small className="timeline-index">{String(index + 1).padStart(2, "0")}</small>
       <EditableText as="strong" editable={editable} onChange={onTextChange} path={`growthSection.steps.${index}.title`} value={text(step.title)} />
       {step.description ? (
         <EditableText as="p" editable={editable} onChange={onTextChange} path={`growthSection.steps.${index}.description`} value={text(step.description)} />
