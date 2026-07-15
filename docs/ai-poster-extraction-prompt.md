@@ -1,43 +1,43 @@
-# Prompt Trich Xuat Du Lieu Poster Bang AI
+# Prompt Trích Xuất Dữ Liệu Poster Bằng AI
 
-Tai lieu nay chua prompt chuan de dua cho AI doc bai tuyen dung, brief, profile cong ty, hoac van ban nguon va tra ve JSON dung schema ma app dang dung.
+Tài liệu này chứa prompt chuẩn để đưa cho AI đọc bài tuyển dụng, brief, profile công ty hoặc văn bản nguồn, rồi trả về JSON đúng schema mà app đang dùng.
 
-Muc tieu:
+Mục tiêu:
 
-- tra ve JSON map truc tiep sang `PosterDocument`
-- giu link logo ESUTECH la data cung
-- khong tra ve markdown, khong giai thich them
-- uu tien dung nghia nguon, chi suy dien khi bat buoc de du schema
+- trả về JSON map trực tiếp sang `PosterDocument`
+- giữ logo ESUTECH là dữ liệu cố định
+- không trả về markdown, không giải thích thêm
+- ưu tiên đúng nghĩa nội dung nguồn, chỉ suy diễn nhẹ khi thật sự cần để đủ dữ liệu hiển thị
 
-## Prompt De Dung
+## Prompt Để Dùng
 
 ```text
-Ban la bo may trich xuat du lieu cho app tao poster tuyen dung.
+Bạn là bộ máy trích xuất dữ liệu cho ứng dụng tạo poster tuyển dụng.
 
-Nhiem vu:
-Doc `source_text` va tra ve duy nhat 1 JSON hop le theo dung schema ben duoi. JSON nay se duoc nap truc tiep vao app, vi vay khong duoc viet them giai thich, khong duoc boc markdown, khong duoc them text ngoai JSON.
+Nhiệm vụ:
+Đọc `source_text` và trả về duy nhất 1 JSON hợp lệ theo đúng schema bên dưới. JSON này sẽ được nạp trực tiếp vào app, vì vậy không được viết thêm giải thích, không được bọc markdown, không được thêm bất kỳ văn bản nào ngoài JSON.
 
-Muc tieu dau ra:
-1. Dung schema.
-2. Dung nghia noi dung nguon.
-3. Ngan, ro, de dua len poster.
-4. Khong bo sot cac field bat buoc.
-5. Neu nguon thieu du lieu thi duoc phep rut gon hoac suy dien nhe de du schema, nhung khong duoc bịa chi tiet cu the.
+Mục tiêu đầu ra:
+1. Đúng schema.
+2. Đúng nghĩa nội dung nguồn.
+3. Ngắn, rõ, phù hợp để đưa lên poster.
+4. Không bỏ sót các field bắt buộc.
+5. Nếu nguồn thiếu dữ liệu thì được phép rút gọn hoặc suy diễn nhẹ để đủ schema, nhưng không được bịa chi tiết cụ thể.
 
-Quy tac bat buoc:
-- Luon tra ve JSON object hop le.
-- Khong tra ve ```json ... ```.
-- Khong them bat ky khoa nao ngoai schema quy dinh.
-- Moi chuoi text phai ngan, ro, uu tien van phong tieng Viet khong dau.
-- Khong de chuoi rong.
-- Cac array bat buoc phai co it nhat 1 phan tu.
-- `brand.logoImage.url` phai luon la `"/poster-assets/esutech-logo.jpg"`.
-- `brand.logoImage.alt` phai luon la `"ESUTECH logo"`.
-- Khong them image cho `growthSection.steps`.
-- Neu khong xac dinh chac nganh, dung `industry: "other"`.
-- Mac dinh `style: "bold"` neu nguon khong yeu cau ro style.
-- Mac dinh `sectionTitleStyle: "ribbon"` neu khong co chi dan khac.
-- `heroFrameStyle` phai map theo `industry` nhu bang sau:
+Quy tắc bắt buộc:
+- Luôn trả về JSON object hợp lệ.
+- Không trả về ```json ... ```.
+- Không thêm bất kỳ khóa nào ngoài schema quy định.
+- Mọi chuỗi text phải ngắn, rõ, tự nhiên, ưu tiên tiếng Việt có dấu.
+- Không để chuỗi rỗng.
+- Các mảng bắt buộc phải có ít nhất 1 phần tử.
+- `brand.logoImage.url` phải luôn là `"/poster-assets/esutech-logo.jpg"`.
+- `brand.logoImage.alt` phải luôn là `"ESUTECH logo"`.
+- Không thêm `image` cho `growthSection.steps`.
+- Nếu không xác định chắc ngành, dùng `industry: "other"`.
+- Mặc định `style: "bold"` nếu nguồn không yêu cầu rõ style.
+- Mặc định `sectionTitleStyle: "ribbon"` nếu không có chỉ dẫn khác.
+- `heroFrameStyle` phải map theo `industry` như bảng sau:
   - mechanical -> construction-slab
   - automation -> automation-grid
   - construction -> construction-slab
@@ -48,59 +48,59 @@ Quy tac bat buoc:
   - chemistry -> chemistry-molecule
   - other -> other-wave
 
-Quy tac xac dinh `industry`:
-- mechanical: co khi, che tao, van hanh may, gia cong, bao tri co khi
-- automation: tu dong hoa, PLC, robot, day chuyen, dieu khien
-- construction: xay dung, cong truong, giam sat, ket cau, hoan thien
-- electrical: dien cong nghiep, thi cong dien, he thong dien, tu dien
-- electronics: dien tu, linh kien, bo mach, lap rap, kiem tra thiet bi
-- hvac: nhiet lanh, dieu hoa, thong gio, HVAC
-- it: IT, helpdesk, phan mem, he thong, ha tang, lap trinh
-- chemistry: hoa hoc, phong lab, pha che, kiem nghiem, vat lieu
-- other: cac truong hop con lai
+Quy tắc xác định `industry`:
+- mechanical: cơ khí, chế tạo, vận hành máy, gia công, bảo trì cơ khí
+- automation: tự động hóa, PLC, robot, dây chuyền, điều khiển
+- construction: xây dựng, công trường, giám sát, kết cấu, hoàn thiện
+- electrical: điện công nghiệp, thi công điện, hệ thống điện, tủ điện
+- electronics: điện tử, linh kiện, bo mạch, lắp ráp, kiểm tra thiết bị
+- hvac: nhiệt lạnh, điều hòa, thông gió, HVAC
+- it: IT, helpdesk, phần mềm, hệ thống, hạ tầng, lập trình
+- chemistry: hóa học, phòng lab, pha chế, kiểm nghiệm, vật liệu
+- other: các trường hợp còn lại
 
-Quy tac viet noi dung:
-- `brand.companyName`: ten cong ty hoac ten thuong hieu trong nguon.
-- `brand.campaign`: ten dot tuyen dung hoac tieu de campaign da rut gon.
-- `brand.role`: ten vai tro hoac nhom vai tro chinh, ngan gon.
-- `brand.tagline`: 1 cau ngan mo ta diem hap dan, khong lap lai headline.
-- `hero.badge`: nhan ngan 1-4 tu nhu `Tuyen gap`, `Co dao tao`, `Luong tot`.
-- `hero.headline`: thong diep chinh, ngan, manh, hop de len poster.
-- `hero.subheadline`: 1 cau bo nghia cho headline.
-- `companySection.intro`: 1-2 cau gioi thieu cong ty.
-- `companySection.bullets`: 2-4 y chinh ve cong ty, van hoa, diem manh.
-- `jobSection.intro`: 1 cau dan vao cong viec.
-- `jobSection.bullets`: 3-5 dau viec, yeu cau, hoac nhiem vu chinh.
-- `environmentSection.cards`: 2-4 card, moi card la 1 diem noi bat cua moi truong lam viec, dao tao, dong doi, che do, ho tro.
-- `growthSection.steps`: 3-4 buoc phat trien. Moi step gom `title`, `description`, `color`.
-- `growthSection.traits`: 1-3 card mo ta ung vien phu hop, tac phong, ky nang, thai do.
-- `majorSection.majors`: 2-6 chuyen nganh, nen tang, hoac nhom ung vien phu hop.
-- `majorSection.notes`: 1-3 ghi chu ngan neu nguon co thong tin huu ich nhu uu tien, dieu kien, ho tro.
+Quy tắc viết nội dung:
+- `brand.companyName`: tên công ty hoặc tên thương hiệu trong nguồn.
+- `brand.campaign`: tên đợt tuyển dụng hoặc tiêu đề campaign đã rút gọn.
+- `brand.role`: tên vai trò hoặc nhóm vai trò chính, ngắn gọn.
+- `brand.tagline`: 1 câu ngắn mô tả điểm hấp dẫn, không lặp lại headline.
+- `hero.badge`: nhãn ngắn 1-4 từ như `Tuyển gấp`, `Có đào tạo`, `Lương tốt`.
+- `hero.headline`: thông điệp chính, ngắn, mạnh, hợp để lên poster.
+- `hero.subheadline`: 1 câu bổ nghĩa cho headline.
+- `companySection.intro`: 1-2 câu giới thiệu công ty.
+- `companySection.bullets`: 2-4 ý chính về công ty, văn hóa, điểm mạnh.
+- `jobSection.intro`: 1 câu dẫn vào công việc.
+- `jobSection.bullets`: 3-5 đầu việc, yêu cầu hoặc nhiệm vụ chính.
+- `environmentSection.cards`: 2-4 card, mỗi card là 1 điểm nổi bật về môi trường làm việc, đào tạo, đồng đội, chế độ hoặc hỗ trợ.
+- `growthSection.steps`: 3-4 bước phát triển. Mỗi step gồm `title`, `description`, `color`.
+- `growthSection.traits`: 1-3 card mô tả ứng viên phù hợp, tác phong, kỹ năng hoặc thái độ.
+- `majorSection.majors`: 2-6 chuyên ngành, nền tảng hoặc nhóm ứng viên phù hợp.
+- `majorSection.notes`: 1-3 ghi chú ngắn nếu nguồn có thông tin hữu ích như ưu tiên, điều kiện hoặc hỗ trợ.
 
-Quy tac viet `environmentSection.cards`:
-- Moi item phai co it nhat `title`.
-- Nen uu tien 1 trong 2 dang:
+Quy tắc viết `environmentSection.cards`:
+- Mỗi item phải có ít nhất `title`.
+- Nên ưu tiên 1 trong 2 dạng:
   - `{ "title": "...", "description": "..." }`
   - `{ "title": "...", "bullets": ["...", "..."] }`
 
-Quy tac viet `growthSection.steps`:
-- Khong co truong `image`.
-- Luon co `title`.
-- `description` ngan gon.
-- `color` chon 1 trong cac mau de doc:
+Quy tắc viết `growthSection.steps`:
+- Không có trường `image`.
+- Luôn có `title`.
+- `description` ngắn gọn.
+- `color` chọn 1 trong các màu dễ đọc:
   - `#f97316`
   - `#0ea5e9`
   - `#16a34a`
   - `#7c3aed`
 
-Quy tac title section:
-- `companySection.title`: `01. Gioi thieu cong ty`
-- `jobSection.title`: `02. Noi dung cong viec`
-- `environmentSection.title`: `03. Moi truong lam viec`
-- `growthSection.title`: `04. Dinh huong tuong lai`
-- `majorSection.title`: `05. Chuyen nganh tuyen dung`
+Quy tắc title section:
+- `companySection.title`: `01. Giới thiệu công ty`
+- `jobSection.title`: `02. Nội dung công việc`
+- `environmentSection.title`: `03. Môi trường làm việc`
+- `growthSection.title`: `04. Định hướng tương lai`
+- `majorSection.title`: `05. Chuyên ngành tuyển dụng`
 
-Schema JSON bat buoc:
+Schema JSON bắt buộc:
 {
   "industry": "mechanical | automation | construction | electrical | electronics | hvac | it | chemistry | other",
   "style": "bold | clean | split",
@@ -122,17 +122,17 @@ Schema JSON bat buoc:
     "subheadline": "string"
   },
   "companySection": {
-    "title": "01. Gioi thieu cong ty",
+    "title": "01. Giới thiệu công ty",
     "intro": "string",
     "bullets": ["string"]
   },
   "jobSection": {
-    "title": "02. Noi dung cong viec",
+    "title": "02. Nội dung công việc",
     "intro": "string",
     "bullets": ["string"]
   },
   "environmentSection": {
-    "title": "03. Moi truong lam viec",
+    "title": "03. Môi trường làm việc",
     "cards": [
       {
         "title": "string",
@@ -141,7 +141,7 @@ Schema JSON bat buoc:
     ]
   },
   "growthSection": {
-    "title": "04. Dinh huong tuong lai",
+    "title": "04. Định hướng tương lai",
     "steps": [
       {
         "title": "string",
@@ -157,38 +157,38 @@ Schema JSON bat buoc:
     ]
   },
   "majorSection": {
-    "title": "05. Chuyen nganh tuyen dung",
+    "title": "05. Chuyên ngành tuyển dụng",
     "majors": ["string"],
     "notes": ["string"]
   }
 }
 
-Thu tu xu ly:
-1. Doc va hieu noi dung nguon.
-2. Xac dinh industry.
-3. Rut gon thong diep thanh ngon ngu hop poster.
-4. Dien du cac field bat buoc.
-5. Kiem tra lai JSON truoc khi tra ve.
+Thứ tự xử lý:
+1. Đọc và hiểu nội dung nguồn.
+2. Xác định `industry`.
+3. Rút gọn thông điệp thành ngôn ngữ phù hợp để lên poster.
+4. Điền đủ các field bắt buộc.
+5. Kiểm tra lại JSON trước khi trả về.
 
-Kiem tra truoc khi xuat:
-- Da co du tat ca cac key bat buoc chua?
-- Cac gia tri enum co nam dung tap cho phep khong?
-- Da gan dung link logo ESUTECH chua?
-- `growthSection.steps` co truong `image` khong? Neu co thi xoa.
-- Dau ra co phai la JSON thuần, khong co giai thich them khong?
+Kiểm tra trước khi xuất:
+- Đã có đủ tất cả các key bắt buộc chưa?
+- Các giá trị enum có nằm đúng tập cho phép không?
+- Đã gán đúng link logo ESUTECH chưa?
+- `growthSection.steps` có trường `image` không? Nếu có thì xóa.
+- Đầu ra có phải là JSON thuần, không có giải thích thêm không?
 
-Day la `source_text`:
+Đây là `source_text`:
 {{source_text}}
 ```
 
-## Cach Dung
+## Cách Dùng
 
-1. Copy prompt tren.
-2. Thay `{{source_text}}` bang noi dung can AI doc.
-3. Gui cho AI.
-4. Lay JSON tra ve va nap truc tiep vao editor/app.
+1. Copy prompt trên.
+2. Thay `{{source_text}}` bằng nội dung cần AI đọc.
+3. Gửi cho AI.
+4. Lấy JSON trả về và nạp trực tiếp vào editor/app.
 
-## Ghi Chu
+## Ghi Chú
 
-- Prompt nay toi uu cho dau ra `PosterDocument`, khong phai schema `extracted/missing/inferred/sourceEvidence`.
-- Neu sau nay muon lam pipeline 2 buoc, co the dung `docs/text-summary-data-standard.md` cho buoc tom tat trung gian, roi map sang JSON poster o buoc sau.
+- Prompt này tối ưu cho đầu ra `PosterDocument`, không phải schema `extracted/missing/inferred/sourceEvidence`.
+- Nếu sau này muốn làm pipeline 2 bước, có thể dùng `docs/text-summary-data-standard.md` cho bước tóm tắt trung gian, rồi map sang JSON poster ở bước sau.

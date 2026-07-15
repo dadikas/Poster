@@ -1,0 +1,127 @@
+{
+"industry": "mechanical",
+"style": "bold",
+"sectionTitleStyle": "ribbon",
+"heroFrameStyle": "construction-slab",
+"brand": {
+"logoImage": {
+"url": "/poster-assets/esutech-logo.jpg",
+"alt": "ESUTECH logo"
+},
+"companyName": "Công ty sản xuất và tái sinh thùng phuy",
+"campaign": "Tuyển dụng kỹ sư kỹ thuật",
+"role": "Kỹ sư cơ khí - điện",
+"tagline": "Phát triển công nghệ sản xuất tại Nhật Bản và Việt Nam"
+},
+"hero": {
+"badge": "Cơ hội quốc tế",
+"headline": "Kiến tạo nhà máy tương lai",
+"subheadline": "Tham gia thiết kế, cải tiến và triển khai hệ thống sản xuất thùng phuy"
+},
+"companySection": {
+"title": "01. Giới thiệu công ty",
+"intro": "Công ty hoạt động trong lĩnh vực tái sinh thùng phuy đã qua sử dụng và sản xuất thùng phuy mới tại Nhật Bản và Việt Nam.",
+"bullets": [
+"Tại Nhật Bản đang phát triển hoạt động tái sinh thùng phuy",
+"Tại Việt Nam đang vận hành hoạt động sản xuất thùng phuy mới",
+"Có kế hoạch mở rộng sản xuất thùng phuy mới tại Nhật Bản",
+"Tiếp tục triển khai các dự án nhà máy mới tại Việt Nam"
+]
+},
+"jobSection": {
+"title": "02. Nội dung công việc",
+"intro": "Tham gia toàn bộ quá trình thiết kế, lắp đặt, cải tiến và bảo trì hệ thống sản xuất.",
+"bullets": [
+"Thiết kế bố trí và xem xét thông số thiết bị sản xuất thùng phuy",
+"Hướng dẫn lắp đặt, kiểm tra, chạy thử và điều chỉnh thiết bị",
+"Cải tiến thiết kế các thiết bị trong quy trình tái sinh thùng phuy",
+"Lập kế hoạch bảo trì và quản lý tình trạng thiết bị",
+"Nghiên cứu và phát triển thiết bị, công nghệ sản xuất mới"
+]
+},
+"environmentSection": {
+"title": "03. Môi trường làm việc",
+"cards": [
+{
+"title": "Kinh nghiệm toàn diện",
+"description": "Trực tiếp tham gia từ khâu lập kế hoạch, thiết kế đến lắp đặt và vận hành thiết bị."
+},
+{
+"title": "Dự án thực tế",
+"description": "Tham gia cải tiến dây chuyền và triển khai công nghệ tại các nhà máy."
+},
+{
+"title": "Làm việc quốc tế",
+"description": "Phối hợp cùng các bộ phận và cơ sở sản xuất tại Nhật Bản và Việt Nam."
+},
+{
+"title": "Giai đoạn tăng trưởng",
+"description": "Có cơ hội đóng góp vào các dự án mở rộng sản xuất và thành lập nhà máy mới."
+}
+]
+},
+"growthSection": {
+"title": "04. Định hướng tương lai",
+"steps": [
+{
+"title": "Làm chủ thiết bị",
+"description": "Tích lũy kiến thức về thiết kế, vận hành và bảo trì thiết bị sản xuất.",
+"color": "#0ea5e9"
+},
+{
+"title": "Chuyên gia công nghệ",
+"description": "Phát triển chuyên môn về công nghệ sản xuất và tái sinh thùng phuy.",
+"color": "#16a34a"
+},
+{
+"title": "Dẫn dắt hiện trường",
+"description": "Quản lý tiến độ, chất lượng và hoạt động của bộ phận sản xuất.",
+"color": "#f97316"
+},
+{
+"title": "Lãnh đạo dự án",
+"description": "Thúc đẩy dự án lắp đặt thiết bị và thành lập nhà máy mới tại hai quốc gia.",
+"color": "#7c3aed"
+}
+],
+"traits": [
+{
+"title": "Tư duy kỹ thuật",
+"bullets": [
+"Có khả năng phân tích và giải quyết vấn đề",
+"Quan tâm đến máy móc và quy trình sản xuất"
+]
+},
+{
+"title": "Tinh thần cải tiến",
+"bullets": [
+"Chủ động đề xuất giải pháp mới",
+"Sẵn sàng nghiên cứu và thử nghiệm công nghệ"
+]
+},
+{
+"title": "Khả năng phối hợp",
+"bullets": [
+"Làm việc tốt với bộ phận sản xuất và đối tác",
+"Sẵn sàng tham gia dự án tại Nhật Bản và Việt Nam"
+]
+}
+]
+},
+"majorSection": {
+"title": "05. Chuyên ngành tuyển dụng",
+"majors": [
+"Cơ khí chế tạo máy",
+"Kỹ thuật điện",
+"Cơ điện tử",
+"Tự động hóa",
+"Kỹ thuật sản xuất",
+"Bảo trì công nghiệp"
+],
+"notes": [
+"Phù hợp với ứng viên muốn phát triển trong lĩnh vực sản xuất và thiết bị",
+"Có cơ hội tham gia dự án tại Nhật Bản và Việt Nam",
+"Ưu tiên tinh thần học hỏi và khả năng giải quyết vấn đề"
+]
+}
+}
